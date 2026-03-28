@@ -1,0 +1,55 @@
+/* University of Alberta branding */
+:root {
+  --md-primary-fg-color: #007C41;        /* UofA Green */
+  --md-primary-fg-color--light: #00A651;
+  --md-primary-fg-color--dark:  #005A2D;
+  --md-accent-fg-color: #FFDB05;         /* UofA Gold */
+}
+
+/* Custom header styling */
+.md-header {
+  background: linear-gradient(135deg, #007C41 0%, #00A651 100%);
+}
+
+/* Footer styling */
+.md-footer {
+  background-color: #007C41;
+}
+
+/* Code block enhancements */
+.md-typeset .highlight .filename {
+  background-color: var(--md-primary-fg-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  border-radius: 0.2rem 0.2rem 0 0;
+}
+
+/* University of Alberta branded callouts */
+.md-typeset .admonition.uofa {
+  border-color: var(--md-primary-fg-color);
+}
+
+.md-typeset .admonition.uofa > .admonition-title {
+  background-color: var(--md-primary-fg-color);
+  color: white;
+}
+
+/* Navigation improvements */
+.md-nav__title {
+  font-weight: 600;
+}
+
+/* Search result highlighting */
+.md-search-result__meta {
+  color: var(--md-primary-fg-color);
+}
+
+/* Link styling */
+.md-typeset a {
+  color: var(--md-primary-fg-color);
+}
+
+.md-typeset a:hover {
+  color: var(--md-primary-fg-color--light);
+}
