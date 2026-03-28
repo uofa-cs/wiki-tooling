@@ -49,7 +49,12 @@ nav:
   - Skills:
     - docs/skills/
   - Career:
-    - docs/career/
+    - Internships: docs/career/internships.md
+    - Resume Guide: docs/career/resume-guide.md
+    - Interview Prep: docs/career/interview-prep.md
+    - New Grad: docs/career/new-grad.md
+    - Career Paths: docs/career/career-paths.md
+    - Edmonton Tech Scene: docs/career/edmonton-tech-scene.md
   - Research:
     - docs/research/
   - Community:
