@@ -53,7 +53,11 @@ nav:
     - Hidden Gems: docs/courses/hidden-gems.md
     - Professor Guide: docs/courses/professor-guide.md
   - Skills:
-    - docs/skills/
+    - What to Learn: docs/skills/what-to-learn.md
+    - Programming Languages: docs/skills/programming-languages.md
+    - Tools and Setup: docs/skills/tools-and-setup.md
+    - System Design: docs/skills/system-design.md
+    - Side Projects: docs/skills/side-projects.md
   - Career:
     - Internships: docs/career/internships.md
     - Resume Guide: docs/career/resume-guide.md
@@ -62,11 +66,17 @@ nav:
     - Career Paths: docs/career/career-paths.md
     - Edmonton Tech Scene: docs/career/edmonton-tech-scene.md
   - Research:
-    - docs/research/
+    - Getting into Research: docs/research/getting-into-research.md
+    - Grad School: docs/research/grad-school.md
+    - UAlberta Labs: docs/research/ualberta-labs.md
   - Community:
-    - docs/community/
+    - Clubs and Organizations: docs/community/clubs-and-orgs.md
+    - Networking: docs/community/networking.md
+    - Online Presence: docs/community/online-presence.md
   - Resources:
-    - docs/resources/
+    - Learning Resources: docs/resources/learning-resources.md
+    - Scholarships: docs/resources/scholarships.md
+    - FAQ: docs/resources/faq.md
 
 plugins:
   - search:
