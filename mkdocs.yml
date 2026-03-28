@@ -43,9 +43,15 @@ docs_dir: wiki-content
 nav:
   - Home: README.md
   - Getting Started:
-    - docs/getting-started/
+    - Program Overview: docs/getting-started/program-overview.md
+    - Degree Planning: docs/getting-started/degree-planning.md
+    - First Year Guide: docs/getting-started/first-year-guide.md
   - Courses:
-    - docs/courses/
+    - Course Guide: docs/courses/course-guide.md
+    - Course Reviews: docs/courses/course-reviews.md
+    - Elective Strategy: docs/courses/elective-strategy.md
+    - Hidden Gems: docs/courses/hidden-gems.md
+    - Professor Guide: docs/courses/professor-guide.md
   - Skills:
     - docs/skills/
   - Career:
