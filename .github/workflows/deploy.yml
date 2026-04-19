@@ -1,11 +1,13 @@
 name: Deploy Wiki Site
 on:
   schedule:
-    # Check every 10 minutes for updates
-    - cron: '*/10 * * * *'
-  workflow_dispatch:  # Manual trigger
+    # Fallback: check every 10 minutes in case a dispatch is missed
+    - cron: "*/10 * * * *"
+  workflow_dispatch: # Manual trigger
+  repository_dispatch:
+    types: [content-updated]
   push:
-    branches: [ main ]
+    branches: [main]
 
 permissions:
   contents: read
@@ -23,18 +25,18 @@ jobs:
     steps:
       - name: Checkout source repo
         uses: actions/checkout@v4
-        
+
       - name: Checkout wiki content
         uses: actions/checkout@v4
         with:
           repository: uofa-cs/uofa-cs-wiki
           path: wiki-content
-          
+
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.x'
-          
+          python-version: "3.x"
+
       - name: Cache pip dependencies
         uses: actions/cache@v3
         with:
@@ -42,15 +44,15 @@ jobs:
           key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip-
-            
+
       - name: Install dependencies
         run: |
           pip install "mkdocs-material[imaging]"
           pip install mkdocs-git-revision-date-localized-plugin
-          
+
       - name: Build site
         run: mkdocs build --clean
-        
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
