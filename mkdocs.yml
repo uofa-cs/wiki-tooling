@@ -3,6 +3,7 @@ site_description: A practical, opinionated guide to pursuing CS at the Universit
 site_url: https://uofa-cs.github.io/uofa-cs-wiki/
 repo_url: https://github.com/uofa-cs/uofa-cs-wiki
 repo_name: uofa-cs/uofa-cs-wiki
+edit_uri: edit/main/
 
 theme:
   name: material
