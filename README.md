@@ -1,12 +1,12 @@
 # UofA CS Wiki Source
 
-This repository contains the build configuration for the [UofA CS Wiki](https://uofa-cs.github.io/uofa-cs-wiki/) website.
+This repository contains the build configuration for the [UofA CS Wiki](https://ualberta.dev/) website.
 
 ## How it works
 
 - **Content source**: [uofa-cs/uofa-cs-wiki](https://github.com/uofa-cs/uofa-cs-wiki) (pure markdown, human-readable)
 - **Build repo**: This repository (contains MkDocs config, GitHub Actions, styling)
-- **Output**: GitHub Pages site at [uofa-cs.github.io/uofa-cs-wiki](https://uofa-cs.github.io/uofa-cs-wiki)
+- **Output**: GitHub Pages site at [ualberta.dev](https://ualberta.dev/)
 
 ## Automatic updates
 
