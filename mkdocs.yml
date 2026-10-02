@@ -137,5 +137,10 @@ extra:
 extra_css:
   - stylesheets/extra.css
 
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - https://unpkg.com/tablesort@5.3.0/dist/sorts/tablesort.number.min.js
+  - javascripts/tables.js
+
 copyright: |
   Built by UofA CS students, for UofA CS students. Not affiliated with or endorsed by the University of Alberta.
