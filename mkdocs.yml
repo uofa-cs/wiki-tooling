@@ -3,8 +3,8 @@
 INHERIT: wiki-content/nav.yml
 
 site_name: UofA CS Wiki
-site_description: A practical, opinionated guide to pursuing CS at the University of Alberta
-site_url: https://uofa-cs.github.io/uofa-cs-wiki/
+site_description: What senior UofA CS students know that the calendar doesn't tell you. Courses, program planning, internships, and research, written by students.
+site_url: https://ualberta.dev/
 repo_url: https://github.com/uofa-cs/uofa-cs-wiki
 repo_name: uofa-cs/uofa-cs-wiki
 edit_uri: edit/main/
