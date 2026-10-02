@@ -5,7 +5,8 @@ Usage:
         Fetch every undergraduate CMPUT course and write the facts as JSON.
 
     python scripts/catalogue.py nav wiki-content/docs/courses
-        Print the Courses section of nav.yml, grouped by level.
+        Print the Courses section of nav.yml, grouped by level, or rewrite it
+        in place with --update wiki-content/nav.yml.
 
     python scripts/catalogue.py check wiki-content/docs/courses
         Compare each course page's frontmatter with the catalogue and report
@@ -208,10 +209,19 @@ def cmd_nav(args) -> None:
         level = meta["code"].split()[1][0] + "00-level"
         groups.setdefault(level, []).append(
             f"      - \"{meta['code']}: {meta['title']}\": docs/courses/{path.name}")
-    print("  - Courses:\n    - All Courses: docs/courses/index.md")
+    lines = ["  - Courses:", "    - All Courses: docs/courses/index.md"]
     for level, items in groups.items():
-        print(f"    - {level}:")
-        print("\n".join(items))
+        lines.append(f"    - {level}:")
+        lines.extend(items)
+    block = "\n".join(lines) + "\n"
+    if not args.update:
+        print(block, end="")
+        return
+    nav = Path(args.update)
+    text, n = re.subn(r"  - Courses:\n(?:    .*\n)+", lambda _: block, nav.read_text())
+    if n != 1:
+        sys.exit(f"couldn't find the Courses section in {nav}")
+    nav.write_text(text)
 
 
 def main() -> None:
@@ -219,7 +229,7 @@ def main() -> None:
     sub = p.add_subparsers(required=True)
     f = sub.add_parser("fetch"); f.add_argument("--out", default="catalogue.json"); f.set_defaults(fn=cmd_fetch)
     s = sub.add_parser("seed"); s.add_argument("dir"); s.add_argument("--since", type=int, default=1890); s.set_defaults(fn=cmd_seed)
-    n = sub.add_parser("nav"); n.add_argument("dir"); n.set_defaults(fn=cmd_nav)
+    n = sub.add_parser("nav"); n.add_argument("dir"); n.add_argument("--update", metavar="NAV_YML"); n.set_defaults(fn=cmd_nav)
     c = sub.add_parser("check"); c.add_argument("dir"); c.set_defaults(fn=cmd_check)
     args = p.parse_args()
     args.fn(args)

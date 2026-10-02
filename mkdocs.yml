@@ -79,6 +79,8 @@ plugins:
         docs/skills/what-to-learn.md: docs/skills/curriculum-map.md
         docs/skills/programming-languages.md: docs/skills/curriculum-map.md
         docs/skills/system-design.md: docs/skills/curriculum-map.md
+        docs/career/resume-guide.md: docs/career/applications-and-offers.md
+        docs/career/new-grad.md: docs/career/applications-and-offers.md
   - search:
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
   - git-revision-date-localized:
@@ -136,6 +138,11 @@ extra:
 
 extra_css:
   - stylesheets/extra.css
+
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - https://unpkg.com/tablesort@5.3.0/dist/sorts/tablesort.number.min.js
+  - javascripts/tables.js
 
 copyright: |
   Built by UofA CS students, for UofA CS students. Not affiliated with or endorsed by the University of Alberta.

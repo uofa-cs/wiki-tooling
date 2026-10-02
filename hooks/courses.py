@@ -116,7 +116,7 @@ def course_index(docs_dir: Path, from_page: str) -> str:
                                       f"{meta.get('difficulty') or ''} | {meta.get('workload') or ''} | "
                                       f"{compact_offering(meta.get('terms') or [])} | "
                                       f"{'Yes' if has_reviews(path) else ''} |"))
-    out = []
+    out = ['<div data-course-filter markdown></div>', ""]
     for level in sorted({r[0] for r in rows}):
         out += [f"### {level}-level", "",
                 "| Course | Title | Difficulty | Workload | Offered | Reviews |",

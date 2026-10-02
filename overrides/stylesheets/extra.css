@@ -53,3 +53,24 @@
 .md-typeset a:hover {
   color: var(--md-primary-fg-color--light);
 }
+/* Course index filter */
+.course-filter {
+  width: 100%;
+  padding: 0.6em 0.8em;
+  margin: 0.5em 0;
+  font: inherit;
+  font-size: 0.8rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 4px;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+}
+.course-filter-toggle {
+  font-size: 0.7rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* Sortable table headers */
+article th[role="columnheader"]:not(.no-sort) {
+  cursor: pointer;
+}
