@@ -31,6 +31,8 @@ jobs:
         with:
           repository: uofa-cs/uofa-cs-wiki
           path: wiki-content
+          # Full history so page "last updated" dates are accurate.
+          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v4
@@ -46,9 +48,7 @@ jobs:
             ${{ runner.os }}-pip-
 
       - name: Install dependencies
-        run: |
-          pip install "mkdocs-material[imaging]"
-          pip install mkdocs-git-revision-date-localized-plugin
+        run: pip install -r requirements.txt
 
       - name: Build site
         run: mkdocs build --clean
