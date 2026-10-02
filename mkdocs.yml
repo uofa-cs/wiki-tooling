@@ -63,6 +63,15 @@ validation:
 
 
 plugins:
+  # Old URLs for pages removed or merged during the rebuild.
+  - redirects:
+      redirect_maps:
+        docs/courses/professor-guide.md: docs/courses/course-reviews.md
+        docs/courses/elective-strategy.md: docs/getting-started/degree-planning.md
+        docs/community/online-presence.md: docs/community/networking.md
+        docs/skills/what-to-learn.md: docs/skills/curriculum-map.md
+        docs/skills/programming-languages.md: docs/skills/curriculum-map.md
+        docs/skills/system-design.md: docs/skills/curriculum-map.md
   - search:
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
   - git-revision-date-localized:
