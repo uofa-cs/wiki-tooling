@@ -79,6 +79,8 @@ plugins:
         docs/skills/what-to-learn.md: docs/skills/curriculum-map.md
         docs/skills/programming-languages.md: docs/skills/curriculum-map.md
         docs/skills/system-design.md: docs/skills/curriculum-map.md
+        docs/career/resume-guide.md: docs/career/applications-and-offers.md
+        docs/career/new-grad.md: docs/career/applications-and-offers.md
   - search:
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
   - git-revision-date-localized:
